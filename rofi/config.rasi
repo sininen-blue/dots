@@ -1,0 +1,7 @@
+@theme "/home/sininenblue/.config/rofi/squared-catppuccin.rasi"
+
+configuration {
+	display-drun: "drun";
+	display-run: "run";
+	terminal: "alacritty";
+}

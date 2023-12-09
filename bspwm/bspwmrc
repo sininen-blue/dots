@@ -1,0 +1,32 @@
+#! /bin/sh
+
+setxkbmap us colemak &
+setxkbmap -v 9 -option "" -option "misc:extend,lv5:caps_switch_lock,compose:menu" &
+xset r 66 &
+
+pgrep -x sxhkd > /dev/null || sxhkd &
+pgrep -x dunst > /dev/null || dunst &
+pgrep -x picom > /dev/null || picom &
+pgrep -s redshift > /dev/null || redshift &
+lxqt-policykit-agent &
+pipewire &
+xset r 66 &
+
+feh  --bg-scale  ~/Pictures/enna-wall.jpg
+
+
+bspc monitor -d 1 2 3 4 5
+
+bspc config border_width 1
+bspc config window_gap 0
+
+bspc config split_ratio 0.50
+bspc config single_monocle true
+bspc config borderless_monocle true
+bspc config gapless_monocle true
+bspc config focus_follows_pointer true
+
+bspc config focused_border_color "#cba6f7"
+bspc config normal_border_color "#313244"
+
+bspc rule -a Zathura state=tiled
