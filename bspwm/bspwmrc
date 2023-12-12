@@ -10,7 +10,6 @@ pgrep -x picom > /dev/null || picom &
 pgrep -s redshift > /dev/null || redshift &
 lxqt-policykit-agent &
 pipewire &
-xset r 66 &
 
 feh  --bg-scale  ~/Pictures/enna-wall.jpg
 
